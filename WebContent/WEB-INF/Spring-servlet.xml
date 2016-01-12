@@ -19,21 +19,22 @@
 <context:property-placeholder location="classpath:endpointsv1.properties"/>
 		
 		<mvc:annotation-driven/> 
-		<bean id="loginService"  class="com.service.impl.LoginServiceImpl" autowire="byName">
+		<!-- <bean id="loginService"  class="com.service.impl.LoginServiceImpl" autowire="byName">
 		<property name="restTemplateClass" ref="restTemplate"></property>
-		</bean>
+		</bean> -->
+		 <!--   <bean id="getService"  class="com.service.impl.GetServiceImpl" autowire="byName">
+		<property name="restTemplateClass" ref="restTemplate"></property>
+		<property name="getApiURL" value="${product.getv1}"></property>
+		</bean> -->
 		
-		<bean id="testService"  class="com.service.impl.TestImpl" autowire="byName">
+		<bean id="loginService"  class="com.service.impl.LoginServiceImpl" autowire="byName">
 		<property name="restTemplateClass" ref="restTemplate"></property>
 		<property name="logApiURL" value="${login.endpoint}"></property>
 		</bean>
 		
-	    <bean id="getService"  class="com.service.impl.GetServiceImpl" autowire="byName">
-		<property name="restTemplateClass" ref="restTemplate"></property>
-		<property name="getApiURL" value="${product.getv1}"></property>
-		</bean>
+	 
 		
-		<bean id="getServiceimpltest"  class="com.service.impl.GetImplTest" autowire="byName">
+		<bean id="getService"  class="com.service.impl.GetServiceImpl" autowire="byName">
 		<property name="restTemplateClass" ref="restTemplate"></property>
 		<property name="getApiURL" value="${product.getv1}"></property>
 		</bean>

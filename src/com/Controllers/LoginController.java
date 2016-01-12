@@ -26,8 +26,7 @@ public class LoginController {
 	@Autowired
     private LoginService  loginService;
 	
-	@Autowired
-    private LoginService  testService;
+	
 	
 	
 	
@@ -51,7 +50,7 @@ public class LoginController {
         try {
         	_LOGGER.info("login processing");
             //response = loginService.doLogin(requestEntity.getBody());
-            response = testService.doLogin(requestEntity.getBody());
+            response = loginService.doLogin(requestEntity.getBody());
             if (response != null) {
             	_LOGGER.info("login auth token generated");
                 return new ResponseEntity<>(response, HttpStatus.OK);

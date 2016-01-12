@@ -23,18 +23,28 @@ public class GetController {
 
 	@Autowired
     //private GetService  getService;
-	private GetService	getServiceimpltest;
+	private GetService	getService;
 	
 	
-    public GetService getGetService() {
-		return getServiceimpltest;
+   
+
+
+
+	public GetService getGetService() {
+		return getService;
 	}
+
+
+
 
 
 
 	public void setGetService(GetService getService) {
-		this.getServiceimpltest = getService;
+		this.getService = getService;
 	}
+
+
+
 
 
 
@@ -53,7 +63,7 @@ public class GetController {
         }
         
         try {
-            productResponse = getServiceimpltest.doGet(authToken, xid);
+            productResponse = getService.doGet(authToken, xid);
             
         } catch (RuntimeException re) {
         	
